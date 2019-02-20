@@ -1,0 +1,113 @@
+@media screen and (min-width: 790px) {
+
+    .hide-if-mobile {
+        display: block !important;
+    }
+
+    header#header {
+        text-align: left;
+    }
+
+    header#header img.logo {
+        margin-left: 25px;
+    }
+
+    header#header .toggle-button {
+        display: none;
+    }
+
+    /* Header */
+
+    .sb-slidebar {
+        height: auto;
+    }
+
+    /* Navigation */
+
+    nav#navigation {
+        display:block;
+        position: absolute;
+        top: 53px;
+        bottom: 0;
+        left: 0;
+        width: 200px;
+        background-color: #0f1a38;
+        float: left;
+        z-index: 20;
+        overflow-y: auto;
+     }
+
+    nav#navigation ul li.client:first-child {
+        padding: 35px 0 0 20px;
+        height: 60px;
+    }
+
+    /* Content */
+
+    div#content {
+        position: absolute;
+        top: 113px;
+        right: 0;
+        bottom: 0;
+        left: 200px;
+        padding: 25px;
+    }
+
+    header#logs {
+        left: 200px;
+        display: block;
+    }
+
+    header#logs #filter-text {
+        width: auto;
+    }
+
+    header#logs #filter-text-wrap {
+        width: 190px;
+        margin: 10px 0 0 10px;
+        -webkit-transition: width 200ms ease-in-out;
+        -moz-transition: width 200ms ease-in-out;
+        -ms-transition: width 200ms ease-in-out;
+        -o-transition: width 200ms ease-in-out;
+        transition: width 200ms ease-in-out;
+    }
+
+    header#logs #filter-text-wrap.wide {
+        width: 190px;
+    }
+
+    /* Log table */
+
+    #filter-meta {
+        margin: 10px 0 10px 10px;
+        text-align: left;
+    }
+
+    .logline td.date,
+    .logline td.message,
+    .logline td.logger {
+        display: table-cell;
+        float: none;
+    }
+
+    .logline td.date {
+        padding-bottom: 3px;
+    }
+
+    .logline td.message {
+        padding-top: 3px;
+    }
+
+    .logline td.more {
+        font-size: 1em;
+        padding-top: 3px;
+    }
+
+    .logline td.logger + td.more {
+        padding-top: 3px;
+    }
+
+    a#next-button {
+        width: auto;
+    }
+}
