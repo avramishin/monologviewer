@@ -1,0 +1,32 @@
+server {
+    server_name monolog.host.com;
+    listen   80;
+    root /home/ubuntu/projects/monolog/web;
+    index index.php;
+    access_log off;
+
+    client_max_body_size 50m;
+
+    error_log  /var/www/logs/nginx/monolog.host.error.log notice;
+
+    location / {
+        try_files $uri $uri/ /index.php?$query_string;
+    }
+
+    location /config {
+        deny all;
+    }
+
+    location ~ /\.ht {
+        deny all;
+    }
+
+    location ~* \.(php|phtml)$ {
+        include /etc/nginx/fastcgi.conf;
+        fastcgi_pass 127.0.0.1:9000;
+        fastcgi_index /index.php;
+        fastcgi_buffers 8 256k;
+        fastcgi_buffer_size 128k;
+    }
+
+}
